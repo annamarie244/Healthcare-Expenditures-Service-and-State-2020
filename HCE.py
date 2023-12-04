@@ -2,9 +2,9 @@ import pandas as pd
 import altair as alt
 import streamlit as st
 
-st.title("HCE")
-st.write("Hello, Streamlit!")
+st.title ("Healthcare Expenditures by Service and State 2020")
 
-Healthcare_Expenditure = pd.read_csv("Healthcare Expenditures.csv")
-Healthcare_Expenditure
-
+HealthcareE = st.file_uploader("upload file", type={"csv", "txt"})
+if HealthcareE is not None:
+    HealthcareE_df = pd.read_csv(HealthcareE)
+st.write(HealthcareE_df)
