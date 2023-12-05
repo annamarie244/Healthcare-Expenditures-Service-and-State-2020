@@ -4,6 +4,7 @@ import streamlit as st
 
 st.title ("Healthcare Expenditures by Service and State 2020")
 
-healthcare = pd.DataFrame(pd.read_csv("Healthcare_Expedintures.csv"))
-print(healthcare)
+df = pd.DataFrame(pd.read_csv("Healthcare_Expedintures.csv"))
+print(df)
+
 
