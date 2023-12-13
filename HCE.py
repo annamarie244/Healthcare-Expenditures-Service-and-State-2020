@@ -10,7 +10,8 @@ HealthcareData = pd.read_csv("/Users/annahowell/Documents/programming_directory/
 
 pd.DataFrame(HealthcareData)
 
-def opening_page():
+def create_page1():
+    st.title("Opening Page")
     st.bar_chart(HealthcareData)
 
 
