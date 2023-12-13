@@ -36,7 +36,16 @@ def page1():
     st.subheader("Page 1")
     st.write("write a desc")
     sorted_states = ['Select'] + sorted(df["State"].unique())
+    filtered_df = df[sorted_states]
     selected_state = st.sidebar.selectbox("Choose a State", sorted_states)
+    bar_chart = alt.Chart(filtered_df).mark_bar().encode(
+    x='State:N',
+    y='Total:Q',  
+    color='State:N'
+    ).properties(
+    width=600,
+    height=400
+    )
     
 
 
