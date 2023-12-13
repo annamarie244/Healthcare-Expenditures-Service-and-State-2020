@@ -46,6 +46,7 @@ def page1():
     width=600,
     height=400
     )
+    st.altair_chart(bar_chart, use_container_width=True)
     
 
 
