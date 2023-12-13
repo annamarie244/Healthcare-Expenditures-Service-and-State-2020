@@ -10,7 +10,10 @@ HealthcareData = pd.read_csv("/Users/annahowell/Documents/programming_directory/
 
 pd.DataFrame(HealthcareData)
 
+df=HealthcareData
+
 def main():
+    
     st.title("Home)")
 
     menu = ["Home", "Page 1", "Page 2", "Page 3"]
@@ -32,7 +35,18 @@ def home_page():
 def page1():
     st.subheader("Page 1")
     st.write("write a desc")
+    sorted_states = ['Select'] + sorted(df["State"].unique())
+    selected_state = st.sidebar.selectbox("Choose a State", sorted_states)
     
+
+
+
+
+
+
+
+
+
 
 
 
