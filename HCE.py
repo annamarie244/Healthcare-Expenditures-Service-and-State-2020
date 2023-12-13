@@ -32,9 +32,8 @@ def home_page():
 def page1():
     st.subheader("Page 1")
     st.write("write a desc")
-    selected_state = st.sidebar.selectbox ("Select a State", df['State'].unique())
-    filtered_df = df[df['State'] == selected_state]
-    st.bar_chart(filtered_df['Total'])
+    
+
 
 
 
