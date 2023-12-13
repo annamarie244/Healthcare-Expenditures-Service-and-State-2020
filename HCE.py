@@ -11,26 +11,37 @@ HealthcareData = pd.read_csv("/Users/annahowell/Documents/programming_directory/
 pd.DataFrame(HealthcareData)
 
 def main():
-    st.title("Distribution of Health Care Expenditures by Service by State of Residence in 2020 (in millions)")
+    st.title("Home)")
 
     menu = ["Home", "Page 1", "Page 2"]
     choice = st.sidebar.selectbox("Navigate", menu)
 
     if choice == "Home":
         home_page()
-    elif choice == "Page 1":
+    elif choice == "US Map of Total Healthcare Expenditures for Each State":
         page1()
-    elif choice == "Page 2":
+    elif choice == "Breakdown of Each Service Total Expenditures":
         page2()
+    elif choice == "Breakdown of Each Service Total Expenditures for Each State":
+        page3()
 
 def home_page():
     st.subheader("Home Page")
-    st.write("Welcome to the home page!")
+    st.write("Need More Words")
 
 def page1():
     st.subheader("Page 1")
-    st.write("This is Page 1.")
-    st.plotly_chart({"data": [{"x": [1, 2, 3], "y": [1, 3, 2], "type": "scatter"}], "layout": {"title": "Page 1 Chart"}})
+    st.write("write a desc")
+    st.map(data=None, *, latitude=None, longitude=None, color=None, size=None, zoom=None, use_container_width=True)
+
+
+
+
+
+
+
+
+
 
 def page2():
     st.subheader("Page 2")
