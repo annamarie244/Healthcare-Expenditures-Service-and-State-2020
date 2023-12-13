@@ -76,8 +76,8 @@ def page2():
 
 
 def page3():
-    st.subheader("Page 2")
-    st.write("This is Page 2.")
+    st.subheader("Page 3")
+    st.write("This is Page 3.")
     st.map([[0, 0], [1, 1], [2, 2], [3, 3]])
 
 
