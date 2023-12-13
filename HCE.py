@@ -11,7 +11,7 @@ HealthcareData = pd.read_csv("/Users/annahowell/Documents/programming_directory/
 pd.DataFrame(HealthcareData)
 
 def main():
-    st.title("Multi-Page Streamlit App")
+    st.title("Distribution of Health Care Expenditures by Service by State of Residence in 2020 (in millions)")
 
     menu = ["Home", "Page 1", "Page 2"]
     choice = st.sidebar.selectbox("Navigate", menu)
@@ -33,6 +33,11 @@ def page1():
     st.plotly_chart({"data": [{"x": [1, 2, 3], "y": [1, 3, 2], "type": "scatter"}], "layout": {"title": "Page 1 Chart"}})
 
 def page2():
+    st.subheader("Page 2")
+    st.write("This is Page 2.")
+    st.map([[0, 0], [1, 1], [2, 2], [3, 3]])
+
+def page3():
     st.subheader("Page 2")
     st.write("This is Page 2.")
     st.map([[0, 0], [1, 1], [2, 2], [3, 3]])
