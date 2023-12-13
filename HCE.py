@@ -32,8 +32,7 @@ def home_page():
 def page1():
     st.subheader("Page 1")
     st.write("write a desc")
-    st.map(data=None, *, latitude=None, longitude=None, color=None, size=None, zoom=None, use_container_width=True)
-
+    st.map(data=HealthcareData, latitude=None, longitude=None, color=None, size=None, zoom=None, use_container_width=True)
 
 
 
