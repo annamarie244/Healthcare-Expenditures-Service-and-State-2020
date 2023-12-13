@@ -3,6 +3,7 @@ import pandas as pd
 import altair as alt
 import streamlit as st
 import plotly.express as px
+import json
 
 st.title ("Distribution of Health Care Expenditures by Service by State of Residence in 2020 (in millions)")
 
@@ -32,9 +33,18 @@ def home_page():
 def page1():
     st.subheader("Page 1")
     st.write("write a desc")
-    st.map(data=HealthcareData, latitude=None, longitude=None, color=None, size=None, zoom=None, use_container_width=True)
-
-
+    fig = px.choropleth_mapbox(HealthcareData,
+         geojson=geomap,
+        featureidkey='properties.NAME',
+        locations='state',
+        color='val',
+        color_continuous_scale="YlOrRd",
+        mapbox_style="carto-positron",
+        zoom=3, center = {"lat": 37.0902, "lon": -95.7129},
+        opacity=0.5)
+    fig.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
+    
+    st.plotly_chart(fig)
 
 
 
@@ -46,6 +56,11 @@ def page2():
     st.subheader("Page 2")
     st.write("This is Page 2.")
     st.map([[0, 0], [1, 1], [2, 2], [3, 3]])
+
+
+
+
+
 
 def page3():
     st.subheader("Page 2")
